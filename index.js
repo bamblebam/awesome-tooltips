@@ -15,6 +15,17 @@ class ToolTip extends HTMLElement {
         this.attachShadow({ mode: 'open' })
         this.shadowRoot.appendChild(template.content.cloneNode(true))
     }
+
+    connectedCallback() {
+        this.shadowRoot.querySelector('.round').addEventListener('mouseover', () => {
+            const notification = this.shadowRoot.querySelector('.notification')
+            notification.style.transform = 'scale(1)'
+        })
+        this.shadowRoot.querySelector('.round').addEventListener('mouseleave', () => {
+            const notification = this.shadowRoot.querySelector('.notification')
+            notification.style.transform = 'scale(0)'
+        })
+    }
 }
 
 window.customElements.define('tool-tip', ToolTip)
