@@ -1,10 +1,13 @@
 const template = document.createElement('template')
-template.innerHTML = `<h1>bamble</h1>
-<style>
-body{
-    min-height:45px;
-}
-</style>`
+template.innerHTML = `
+<link rel="stylesheet" href="index.css">
+<div class='tooltip'>
+<div class='round'>!</div>
+<div class="notification">
+Text bamble
+</div>
+</div>
+`
 
 class ToolTip extends HTMLElement {
     constructor() {
