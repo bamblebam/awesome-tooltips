@@ -4,7 +4,7 @@ template.innerHTML = `
 <div class='tooltip'>
 <div class='round'>!</div>
 <div class="notification">
-Text bamble
+<slot/>
 </div>
 </div>
 `
