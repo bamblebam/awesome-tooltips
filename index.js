@@ -40,9 +40,21 @@ class ToolTip extends HTMLElement {
         if (this.getAttribute('tip_color')) {
             this.shadowRoot.querySelector('.notification').style.color = this.getAttribute('tip_color')
         }
+        //the icon that is displayed in the circle should be 1 character
         if (this.getAttribute('circle_icon')) {
             this.shadowRoot.querySelector('.round').innerHTML = this.getAttribute('circle_icon')
         }
+        //sets the size of the icon
+        if (this.getAttribute('circle_icon_size')) {
+            this.shadowRoot.querySelector('.round').style.fontSize = this.getAttribute('circle_icon_size')
+        }
+        //sets the radius of the circle
+        if (this.getAttribute('circle_radius')) {
+            this.shadowRoot.querySelector('.round').style.width = this.getAttribute('circle_radius')
+            this.shadowRoot.querySelector('.round').style.height = this.getAttribute('circle_radius')
+            this.shadowRoot.querySelector('.round').style.lineHeight = this.getAttribute('circle_radius')
+        }
+        //sets the position where the notification will popup
     }
 }
 
