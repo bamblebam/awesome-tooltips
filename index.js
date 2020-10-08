@@ -17,6 +17,7 @@ class ToolTip extends HTMLElement {
     }
 
     connectedCallback() {
+        //function for hover
         this.shadowRoot.querySelector('.round').addEventListener('mouseover', () => {
             const notification = this.shadowRoot.querySelector('.notification')
             notification.style.transform = 'scale(1)'
@@ -25,8 +26,22 @@ class ToolTip extends HTMLElement {
             const notification = this.shadowRoot.querySelector('.notification')
             notification.style.transform = 'scale(0)'
         })
-        if (this.getAttribute('circle_color')) {
-            this.shadowRoot.querySelector('.round').style.background = this.getAttribute('circle_color')
+
+        //attributes operations
+        //color of the circle
+        if (this.getAttribute('circle_background')) {
+            this.shadowRoot.querySelector('.round').style.background = this.getAttribute('circle_background')
+        }
+        //color of the notification background
+        if (this.getAttribute('tip_background')) {
+            this.shadowRoot.querySelector('.notification').style.background = this.getAttribute('tip_background')
+        }
+        //color of the font for the text in the notification 
+        if (this.getAttribute('tip_color')) {
+            this.shadowRoot.querySelector('.notification').style.color = this.getAttribute('tip_color')
+        }
+        if (this.getAttribute('circle_icon')) {
+            this.shadowRoot.querySelector('.round').innerHTML = this.getAttribute('circle_icon')
         }
     }
 }
