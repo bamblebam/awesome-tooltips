@@ -25,6 +25,9 @@ class ToolTip extends HTMLElement {
             const notification = this.shadowRoot.querySelector('.notification')
             notification.style.transform = 'scale(0)'
         })
+        if (this.getAttribute('circle_color')) {
+            this.shadowRoot.querySelector('.round').style.background = this.getAttribute('circle_color')
+        }
     }
 }
 
