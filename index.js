@@ -73,14 +73,6 @@ class ToolTip extends HTMLElement {
         if (this.getAttribute('circle_background')) {
             this.shadowRoot.querySelector('.round').style.background = this.getAttribute('circle_background')
         }
-        //color of the notification background
-        if (this.getAttribute('tip_background')) {
-            this.shadowRoot.querySelector('.notification').style.background = this.getAttribute('tip_background')
-        }
-        //color of the font for the text in the notification 
-        if (this.getAttribute('tip_color')) {
-            this.shadowRoot.querySelector('.notification').style.color = this.getAttribute('tip_color')
-        }
         //the icon that is displayed in the circle should be 1 character
         if (this.getAttribute('circle_icon')) {
             this.shadowRoot.querySelector('.round').innerHTML = this.getAttribute('circle_icon')
@@ -94,6 +86,14 @@ class ToolTip extends HTMLElement {
             this.shadowRoot.querySelector('.round').style.width = this.getAttribute('circle_radius')
             this.shadowRoot.querySelector('.round').style.height = this.getAttribute('circle_radius')
             this.shadowRoot.querySelector('.round').style.lineHeight = this.getAttribute('circle_radius')
+        }
+        //color of the notification background
+        if (this.getAttribute('tip_background')) {
+            this.shadowRoot.querySelector('.notification').style.background = this.getAttribute('tip_background')
+        }
+        //color of the font for the text in the notification 
+        if (this.getAttribute('tip_color')) {
+            this.shadowRoot.querySelector('.notification').style.color = this.getAttribute('tip_color')
         }
         // sets the position where the notification will popup
         if (this.getAttribute('tip_position')) {
