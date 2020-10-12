@@ -27,12 +27,28 @@ class ToolTip extends HTMLElement {
                 this.shadowRoot.querySelector('.notification').style.right = "50%"
                 break
             case 'bottom-right':
-                this.shadowRoot.querySelector('.notification').style.bottom = "-225%"
+                this.shadowRoot.querySelector('.notification').style.bottom = "-250%"
                 this.shadowRoot.querySelector('.notification').style.left = "50%"
                 break
             case 'bottom-left':
-                this.shadowRoot.querySelector('.notification').style.bottom = "-225%"
+                this.shadowRoot.querySelector('.notification').style.bottom = "-250%"
                 this.shadowRoot.querySelector('.notification').style.right = "50%"
+                break
+            case 'top':
+                this.shadowRoot.querySelector('.notification').style.bottom = "125%"
+                this.shadowRoot.querySelector('.notification').style.left = "-200%"
+                break
+            case 'bottom':
+                this.shadowRoot.querySelector('.notification').style.bottom = "-250%"
+                this.shadowRoot.querySelector('.notification').style.left = "-200%"
+                break
+            case 'right':
+                this.shadowRoot.querySelector('.notification').style.bottom = "-60%"
+                this.shadowRoot.querySelector('.notification').style.left = "125%"
+                break
+            case 'left':
+                this.shadowRoot.querySelector('.notification').style.bottom = "-60%"
+                this.shadowRoot.querySelector('.notification').style.right = "125%"
                 break
             default:
                 this.shadowRoot.querySelector('.notification').style.bottom = "125%"
