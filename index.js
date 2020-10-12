@@ -16,6 +16,31 @@ class ToolTip extends HTMLElement {
         this.shadowRoot.appendChild(template.content.cloneNode(true))
     }
 
+    tip_position = (position) => {
+        switch (position) {
+            case 'top-right':
+                this.shadowRoot.querySelector('.notification').style.bottom = "125%"
+                this.shadowRoot.querySelector('.notification').style.left = "50%"
+                break
+            case 'top-left':
+                this.shadowRoot.querySelector('.notification').style.bottom = "125%"
+                this.shadowRoot.querySelector('.notification').style.right = "50%"
+                break
+            case 'bottom-right':
+                this.shadowRoot.querySelector('.notification').style.bottom = "-225%"
+                this.shadowRoot.querySelector('.notification').style.left = "50%"
+                break
+            case 'bottom-left':
+                this.shadowRoot.querySelector('.notification').style.bottom = "-225%"
+                this.shadowRoot.querySelector('.notification').style.right = "50%"
+                break
+            default:
+                this.shadowRoot.querySelector('.notification').style.bottom = "125%"
+
+
+        }
+    }
+
     connectedCallback() {
         //function for hover
         this.shadowRoot.querySelector('.round').addEventListener('mouseover', () => {
@@ -54,7 +79,10 @@ class ToolTip extends HTMLElement {
             this.shadowRoot.querySelector('.round').style.height = this.getAttribute('circle_radius')
             this.shadowRoot.querySelector('.round').style.lineHeight = this.getAttribute('circle_radius')
         }
-        //sets the position where the notification will popup
+        // sets the position where the notification will popup
+        if (this.getAttribute('tip_position')) {
+            this.tip_position(this.getAttribute('tip_position'))
+        }
     }
 }
 
