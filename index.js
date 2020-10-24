@@ -125,6 +125,13 @@ class ToolTip extends HTMLElement {
         if (this.getAttribute('custom_tip_position')) {
             this.custom_tip_position(JSON.parse(this.getAttribute('custom_tip_position')))
         }
+        //notification width and heigh
+        if (this.getAttribute('tip_height')) {
+            this.shadowRoot.querySelector('.notification').style.height = this.getAttribute('tip_height')
+        }
+        if (this.getAttribute('tip_width')) {
+            this.shadowRoot.querySelector('.notification').style.width = this.getAttribute('tip_width')
+        }
     }
 }
 
