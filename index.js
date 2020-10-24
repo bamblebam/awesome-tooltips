@@ -15,7 +15,7 @@ class ToolTip extends HTMLElement {
         this.attachShadow({ mode: 'open' })
         this.shadowRoot.appendChild(template.content.cloneNode(true))
     }
-
+    //function for tip_position
     tip_position = (position) => {
         switch (position) {
             case 'top-right':
@@ -52,8 +52,23 @@ class ToolTip extends HTMLElement {
                 break
             default:
                 this.shadowRoot.querySelector('.notification').style.bottom = "125%"
+        }
+    }
 
-
+    //function for custom_tip_position
+    custom_tip_position = (position) => {
+        const { top, bottom, right, left } = position
+        if (top) {
+            this.shadowRoot.querySelector('.notification').style.top = top
+        }
+        if (bottom) {
+            this.shadowRoot.querySelector('.notification').style.bottom = bottom
+        }
+        if (right) {
+            this.shadowRoot.querySelector('.notification').style.right = right
+        }
+        if (left) {
+            this.shadowRoot.querySelector('.notification').style.left = left
         }
     }
 
@@ -98,6 +113,9 @@ class ToolTip extends HTMLElement {
         // sets the position where the notification will popup
         if (this.getAttribute('tip_position')) {
             this.tip_position(this.getAttribute('tip_position'))
+        }
+        if (this.getAttribute('custom_tip_position')) {
+            this.custom_tip_position(JSON.parse(this.getAttribute('custom_tip_position')))
         }
     }
 }
