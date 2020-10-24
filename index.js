@@ -73,12 +73,20 @@ class ToolTip extends HTMLElement {
     }
 
     connectedCallback() {
-        //function for hover
+        // function for hover
         this.shadowRoot.querySelector('.round').addEventListener('mouseover', () => {
             const notification = this.shadowRoot.querySelector('.notification')
             notification.style.transform = 'scale(1)'
         })
         this.shadowRoot.querySelector('.round').addEventListener('mouseleave', () => {
+            const notification = this.shadowRoot.querySelector('.notification')
+            notification.style.transform = 'scale(0)'
+        })
+        this.shadowRoot.querySelector('.round').addEventListener('touchstart', () => {
+            const notification = this.shadowRoot.querySelector('.notification')
+            notification.style.transform = 'scale(1)'
+        })
+        this.shadowRoot.querySelector('.round').addEventListener('touchend', () => {
             const notification = this.shadowRoot.querySelector('.notification')
             notification.style.transform = 'scale(0)'
         })
