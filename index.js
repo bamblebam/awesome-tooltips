@@ -1,6 +1,46 @@
 const template = document.createElement('template')
 template.innerHTML = `
-<link rel="stylesheet" href="index.css">
+<style>
+body{
+    font-family: 'Nunito', sans-serif;
+}
+
+.container{
+    width: 80%;
+    margin: 8em auto;
+}
+
+.tooltip{
+    display: inline-block;
+    position: relative;
+}
+
+.round{
+    background-color: blue;
+    border-radius: 50%;
+    height: 1.5em;
+    width: 1.5em;
+    line-height: 1.5em;
+    text-align: center;
+    color: white;
+}
+
+.notification{
+    position: absolute;
+    width: 200px;
+    bottom: 125%;
+    border-radius: 10px;
+    z-index: 9;
+    background: white;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+    padding: 1em;
+    font-size: 0.7em;
+    transform: scale(0);
+    transform-origin: bottom left;
+    transition: transform 0.5s;
+
+}
+</style>
 <div class='tooltip'>
 <div class='round'>!</div>
 <div class="notification">
