@@ -5,11 +5,6 @@ body{
     font-family: 'Nunito', sans-serif;
 }
 
-.container{
-    width: 80%;
-    margin: 8em auto;
-}
-
 .tooltip{
     display: inline-block;
     position: relative;
@@ -165,7 +160,7 @@ class ToolTip extends HTMLElement {
         if (this.getAttribute('custom_tip_position')) {
             this.custom_tip_position(JSON.parse(this.getAttribute('custom_tip_position')))
         }
-        //notification width and heigh
+        //notification width and height
         if (this.getAttribute('tip_height')) {
             this.shadowRoot.querySelector('.notification').style.height = this.getAttribute('tip_height')
         }
