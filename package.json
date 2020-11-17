@@ -1,6 +1,6 @@
 {
   "name": "@bamblebam/awesome-tooltips",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A package written in vanilla js that allows you to use simple tooltips on your webapp",
   "main": "src/index.js",
   "scripts": {
