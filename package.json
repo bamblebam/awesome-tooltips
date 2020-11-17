@@ -3,7 +3,16 @@
   "version": "1.0.2",
   "description": "A package written in vanilla js that allows you to use simple tooltips on your webapp",
   "main": "src/index.js",
-  "repository": "git://github.com/bamblebam/awesome-tooltips.git",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bamblebam/awesome-tooltips.git"
+  },
   "keywords": [
     "tooltip",
     "tooltips",
@@ -11,8 +20,8 @@
   ],
   "author": "bamblebam",
   "license": "MIT",
-  "homepage": "https://github.com/bamblebam/awesome-tooltips#readme",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  }
+  "bugs": {
+    "url": "https://github.com/bamblebam/awesome-tooltips/issues"
+  },
+  "homepage": "https://github.com/bamblebam/awesome-tooltips#readme"
 }
