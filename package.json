@@ -1,6 +1,6 @@
 {
   "name": "awesome-tooltips",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A package written in vanilla js that allows you to use simple tooltips on your webapp",
   "main": "src/index.js",
   "publishConfig": {
