@@ -31,3 +31,29 @@ and use the tool-tip tag using
 | custom_tip_position | Sets the position of the tip to a custom location set by the user. This need to be passed as an object in which the top, left, right, bottom attributes need to be assigned. | none |
 | tip_height | Sets the height of the tip. | auto |
 | tip_width | Sets the width of the tip. | 200px |
+
+### Default Tooltip
+```html
+<tool-tip></tool-tip>
+```
+<p align="center">
+  <img src="./images/default.png" />  
+</p>
+
+### Tooltip with red colored circle and top-right tip position
+```html
+<tool-tip circle_background="red" tip_position="top-right">Hello</tool-tip>
+```
+<p align="center">
+  <img src="./images/red_top-right.png"/>  
+</p> 
+
+### Multiple Tooltips at once
+```html
+<tool-tip circle_background="red" tip_position="bottom-right" circle_icon="X">Hello</tool-tip>
+<tool-tip circle_background="green" tip_position="top-left">Hello</tool-tip>
+<tool-tip tip_position="top-right" circle_icon="@">Hello</tool-tip>
+```
+<p align="center">
+  <img src="./images/multiple_images.png"/>  
+</p> 
